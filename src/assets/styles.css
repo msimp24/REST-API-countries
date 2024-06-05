@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+body {
+  background-color: var(--dark-background);
+}
+
+:root {
+  --light-background: hsl(0, 0%, 98%);
+  --dark-background: hsl(207, 26%, 17%);
+  --light-text: hsl(200, 15%, 8%);
+  --light-input: hsl(0, 0%, 52%);
+  --dark-elements: hsl(209, 23%, 22%);
+
+  /*also dark mode text */
+  --light-elements: hsl(0, 0%, 100%);
+}
+header {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 12px;
+}
+
+.nav h2 {
+  font-size: 12px;
+}
+.modes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.light-mode {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+.dark-mode {
+  background-color: var(--dark-background);
+  color: var(--light-elements);
+}
+.dark-elements {
+  background-color: var(--dark-elements);
+  color: var(--light-elements);
+}
+.light-elements {
+  background-color: var(--light-elements);
+  color: var(--light-text);
+}
+.event-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+.search-input {
+  width: 40%;
+  max-width: 300px;
+  padding: 8px;
+  border: none;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+select {
+  width: 30%;
+  max-width: 200px;
+  padding: 8px;
+  border: none;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  width: 100%;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+img {
+  width: 100%;
+}
+.col + .col {
+  margin-left: 2rem;
+}
+
+@media (width < 1000px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (width < 700px) {
+  .card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
