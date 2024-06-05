@@ -12,7 +12,7 @@ body {
 
 :root {
   --light-background: hsl(0, 0%, 98%);
-  --dark-background: hsl(128, 26%, 17%);
+  --dark-background: hsl(128, 87%, 36%);
   --light-text: hsl(200, 15%, 8%);
   --light-input: hsl(0, 0%, 52%);
   --dark-elements: hsl(209, 23%, 22%);
